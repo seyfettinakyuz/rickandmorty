@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RickAndMorty</string>
+
+    <string name="networkError">Bir wifi veya hücresel veri ağına bağlı değilsiniz. Lütfen bağlanın ve tekrar deneyin</string>
+    <string name="unknownError">Bir şeyler yanlış gitti!</string>
+    <string name="requestTimeOutError">İsteğinizi zamanında yakalayamadık. Lütfen tekrar deneyin.</string>
+    <string name="responseMalformedJson">Bir hatayla karşılaştık. Daha sonra tekrar deneyin.</string>
+    <string name="characterNotFound">Karakter bulunamadı</string>
+    <string name="episodeNotFound">Bölüm bulunamadı</string>
+    <string name="status">Status :</string>
+    <string name="name">Name :</string>
+    <string name="species">Species :</string>
+    <string name="lastSeenEpisodeAirDate">Episode Air Date :</string>
+    <string name="lastSeenEpisodeName">Episode Name :</string>
+    <string name="lastLocationName">Last Location :</string>
+    <string name="originLocationName">Origin Location :</string>
+    <string name="numberOfEpisodes">Number Of Episodes :</string>
+    <string name="gender">Gender :</string>
+
+</resources>

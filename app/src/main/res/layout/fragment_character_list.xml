@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="resource"
+            type="com.akyuz.rickandmorty.data.remote.Resource" />
+
+    </data>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/teal_700">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sort_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/sort_selector"
+                android:drawablePadding="10dp"
+                android:text="NAME"
+                android:textColor="@drawable/filter_button_text_selector"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Space
+                android:id="@+id/spc_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toEndOf="@id/sort_name"
+                app:layout_constraintWidth_percent=".04" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sort_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/sort_selector"
+                android:drawablePadding="10dp"
+                android:text="STATUS"
+                android:textColor="@drawable/filter_button_text_selector"
+                app:layout_constraintStart_toEndOf="@id/spc_1" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/list"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/list_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".10" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            resource="@{resource}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+</layout>
